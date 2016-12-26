@@ -1,13 +1,14 @@
-import {Observable} from "rxjs";
+import {Observable,Observer} from "rxjs";
 
 let number =[1,5,10] //it is not async source
 let source = Observable.from(number)
 
-class MyObserver {
+class MyObserver implements Observer<number> {
+    //next: (value: number)=>void;
 
     next(value) {
         console.log(`value: ${value}`);
-
+       // console.log(`value: ${value}`);
     }
 
 

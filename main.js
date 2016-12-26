@@ -5,8 +5,10 @@ var source = rxjs_1.Observable.from(number);
 var MyObserver = (function () {
     function MyObserver() {
     }
+    //next: (value: number)=>void;
     MyObserver.prototype.next = function (value) {
         console.log("value: " + value);
+        // console.log(`value: ${value}`);
     };
     MyObserver.prototype.error = function (e) {
         console.log("Error :  " + e);
